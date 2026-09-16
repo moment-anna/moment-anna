@@ -14,7 +14,8 @@ const headerStyle: React.CSSProperties = {
 
 const footerStyle: React.CSSProperties = {
     textAlign: 'center',
-    height: 64,
+    minHeight: 64,
+    paddingBlock: 12,
     paddingInline: 48,
     fontSize: 12,
     fontFamily: 'MaruBuri',
@@ -34,8 +35,13 @@ export default () => (
             <Content>
                 <Tab/>
             </Content>
-            <Footer style={footerStyle}>MOMENT ANNA
-                2F, 337-31, BUKGAJWA-DONG, SEODAEMUN-GU, SEOUL</Footer>
+            <Footer style={footerStyle}>
+                MOMENT ANNA 2F, 337-31, BUKGAJWA-DONG, SEODAEMUN-GU, SEOUL
+                <br/>
+                <a className="footer-instagram" href="https://www.instagram.com/bar.momentanna/" target="_blank" rel="noopener noreferrer">
+                    Instagram @bar.momentanna
+                </a>
+            </Footer>
         </Layout>
     </>
 );

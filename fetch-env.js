@@ -12,7 +12,7 @@ async function fetchEnv() {
 
     // Google Sheets에서 데이터 가져오기
     const spreadsheetId = process.env.GOOGLE_SHEETS_ID;
-    const whiskyRange = 'Whisky!A2:C200';
+    const whiskyRange = 'Whisky!A2:C1001';
     const cocktailRange = 'Cocktail!A2:C200';
     const nonAlcoholRange = 'NonAlcohol!A2:C200';
 

@@ -1,9 +1,11 @@
 import {Tabs} from "antd";
-import Cocktail from "./Cocktail";
-import Whisky from "./Whisky";
-import NonAlcohol from "./NonAlcohol";
+import MenuListView from "./MenuListView";
+import {getMenus} from "./menuData";
 
-export default () => <>
+const Tab = () => {
+    const menus = getMenus();
+
+    return <>
     <Tabs
         style={{
             backgroundColor: '#fff',
@@ -13,22 +15,14 @@ export default () => <>
         centered
         animated
         items={[
-            {
-                label: `Cocktail`,
-                key: `1`,
-                children: Cocktail()
-            },
-            {
-                label: `Whisky`,
-                key: `2`,
-                children: Whisky()
-            },
-            {
-                label: `Non-Alcohol`,
-                key: `3`,
-                children: NonAlcohol()
-            },
+            {label: 'Cocktail', key: '1', children: <MenuListView items={menus.cocktail}/>},
+            {label: 'Whisky', key: '2', children: <MenuListView items={menus.whisky}/>},
+            {label: 'Wine', key: '3', children: <MenuListView items={menus.wine}/>},
+            {label: 'Non-Alcohol', key: '4', children: <MenuListView items={menus.nonAlcohol}/>},
+            {label: 'Side Dish', key: '5', children: <MenuListView items={menus.sideDish}/>},
         ]}
     />
-</>
+</>;
+};
 
+export default Tab;
