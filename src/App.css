@@ -8,3 +8,13 @@
   color: #333;
   text-decoration: none;
 }
+
+@media (max-width: 480px) {
+  .menu-tabs.ant-tabs .ant-tabs-tab {
+    font-size: 12px;
+  }
+
+  .menu-tabs.ant-tabs .ant-tabs-tab + .ant-tabs-tab {
+    margin-left: 12px;
+  }
+}

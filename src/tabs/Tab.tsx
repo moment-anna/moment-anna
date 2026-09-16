@@ -7,6 +7,7 @@ const Tab = () => {
 
     return <>
     <Tabs
+        className="menu-tabs"
         style={{
             backgroundColor: '#fff',
             fontFamily: 'MaruBuri'
@@ -19,7 +20,7 @@ const Tab = () => {
             {label: 'Whisky', key: '2', children: <MenuListView items={menus.whisky}/>},
             {label: 'Wine', key: '3', children: <MenuListView items={menus.wine}/>},
             {label: 'Non-Alcohol', key: '4', children: <MenuListView items={menus.nonAlcohol}/>},
-            {label: 'Side Dish', key: '5', children: <MenuListView items={menus.sideDish}/>},
+            {label: 'Dish', key: '5', children: <MenuListView items={menus.sideDish}/>},
         ]}
     />
 </>;
